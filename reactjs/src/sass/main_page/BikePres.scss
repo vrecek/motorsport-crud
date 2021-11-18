@@ -1,0 +1,96 @@
+@import '../config';
+
+.bikepres{
+   height:35vw;
+
+   h1{
+      font-size: 3rem;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      margin:1em 0 .5em 0;
+      text-align: center;
+      text-shadow: 0 0 2px black, 0 0 4px black, 0 0 8px black, 0 0 16px black;
+   }
+
+   h3{
+      text-align: center;
+      font-weight: 200;
+      margin-bottom: 2em;
+   }
+
+   article{
+      height:100%;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      img{
+         position: absolute;
+         left:50%;
+         width:50%;
+         transform: translateX(-50%);
+      }
+
+      .circlecont{
+         width:25%;
+         @include flex-sa-c;
+         flex-direction: column;
+
+         &.one{
+            .circle div{
+               left:100%;
+            }
+         }
+         
+         &.two{
+            .circle div{
+               right:100%;
+            }
+         }
+
+         .circle{
+            width:15vw;
+            height:40%;
+            border-radius: 50%;
+            border:3px solid $lightGrey-font-clr;
+            @include flex-sa-c;
+            flex-direction: column;
+            transition: .3s;
+            position: relative;
+
+            div{
+               position: absolute;  
+               top:50%;
+               transform: translateY(-50%);
+               width:100%;
+               height:50%;
+               background: $darkSoft-back-clr;
+               border:3px solid $lightGrey-font-clr;
+               border-radius: 1em;
+               padding:5%;
+               pointer-events: none;
+               transition: .3s;
+               opacity: 0;
+            }
+
+            &:hover{
+               background: $darkSoft-back-clr;
+            }
+            &:hover div{
+               pointer-events: all;
+               opacity: 1;
+            }
+            
+            h4{
+               font-size: clamp(.5rem,2vw,2.5rem);
+               text-transform: uppercase;
+            }
+
+            h5{
+               font-weight: 200;
+               font-size: clamp(.8rem,2vw,2rem);
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,62 @@
+@import './config';
+
+$colors: (
+   1: "#3c6998",
+   2: "#cc9035", 
+   3: "#666", 
+   4: "#34385c"
+);
+
+footer{
+   border-top: 2px solid $lightGrey-font-clr;
+   padding:2em 0;
+
+   .lists{
+      @include flex-sa-c;
+
+      ul{
+         list-style: none;
+
+         li{
+            &:first-child{
+               font-size: 2rem;
+            }
+
+            &:not(:first-child){
+               font-size: .9rem;
+               margin:1em 0;
+               
+            }
+         }
+      }
+   }
+
+   img{
+      display: block;
+      width:10%;
+      margin: 0 auto 2em auto;
+   }
+
+   .icons{
+      @include flex-c-c;
+      margin:2em 0;
+
+      svg{    
+         font-size: 3rem;
+         margin:0 2em;
+         cursor: pointer;
+         transition: .5s;
+         
+         @each $num,$i in $colors{
+            &:nth-child(#{$num}){
+               color: #{$i};
+            }
+         }
+
+         &:hover{
+            opacity: .5;
+         }
+      }
+   }
+   
+}

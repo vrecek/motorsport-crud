@@ -1,0 +1,43 @@
+@import 'config';
+
+.nav1{
+   background: $darkSoft-back-clr;
+   @include flex-sa-c;
+
+   //FIGURE
+   figure{
+      height:5em;
+      @include flex-none-c;
+
+      img{
+         width:100%;
+         height:100%;
+      }
+   }
+
+
+   // LIST
+   ul{
+      @include flex-c-c;
+      list-style: none;
+   }
+
+   li{
+      margin: 0 1em;
+   }
+
+   a{
+      color: $light-font-clr;
+      text-decoration: none;
+      transition: .2s;
+      font-weight: 200;
+
+      &:hover{
+         color: $hover-orange;
+      }
+
+      &.home:hover{
+         color: $hover-blue;
+      }
+   }
+}

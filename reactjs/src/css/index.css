@@ -1,0 +1,81 @@
+.lineseparator {
+  display: block;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scrollup div {
+  background: #b8b9bb;
+  color: #141414;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .5em;
+  font-size: .8rem;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.scrollup:hover {
+  background-color: #b8b9bb;
+}
+
+.scrollup:hover svg {
+  color: black;
+}
+
+.scrollup:hover div {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollup svg {
+  font-size: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  min-height: 100vh;
+  background: #141414;
+  color: #faf6f6;
+  overflow-x: hidden;
+}

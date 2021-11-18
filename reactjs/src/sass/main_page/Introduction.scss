@@ -1,0 +1,56 @@
+@import '../config';
+
+.introduction{
+   h1{
+      text-align: center;
+      padding:1em 0;
+      font-size: 3.5rem;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      filter: blur(1px);
+      text-shadow: 0 0 4px green, 0 0 8px green, 0 0 16px green, 0 0 24px green;
+      animation: anim 20s linear infinite;
+   }
+
+   article{
+      @include flex-sa-c;
+      margin-bottom: 5em;
+
+      div{
+         width:45%;
+         height:30vw;
+
+         &.iimg{
+            overflow: hidden;
+            position: relative;
+
+            img{
+               width:100%;
+               height:100%;
+               transition: all 1s;
+            }       
+         }
+
+         &.itext{
+            h2{
+               font-size: 2rem;
+               margin-bottom: .5em;
+            }
+
+            p{
+               line-height: 2.1em;
+               text-align: justify;
+            }
+         }
+      }
+   }
+}
+
+@keyframes anim {
+   0%{
+      filter: hue-rotate(0deg);
+   }
+   100%{
+      filter: hue-rotate(360deg);
+   }
+}

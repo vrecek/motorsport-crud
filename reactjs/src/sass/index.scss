@@ -1,0 +1,17 @@
+@import 'config';
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-weight: 300;
+   scroll-behavior: smooth;
+}
+
+body{
+   font-family: 'Sora', sans-serif;
+   min-height: 100vh;
+   background: $dark-back-clr;
+   color: $light-font-clr;
+   overflow-x: hidden;
+}

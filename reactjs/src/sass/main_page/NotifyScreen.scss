@@ -1,0 +1,183 @@
+@import '../config';
+
+.notifyscreen{
+   background: url('../images/car.gif');
+   background-size: cover;
+   height:100vh;
+   width:100%;
+   padding:2em 0;
+   margin-bottom: 4em;
+
+   h1{
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 200;
+      filter: blur(1px);
+      text-shadow: 0 0 2px fuchsia, 0 0 4px fuchsia;
+      letter-spacing: 1em;
+      transition: 2s;
+      white-space: nowrap;
+
+      &:hover{
+         letter-spacing:normal;
+      }
+   }
+
+   p.hdrpara{
+      text-align: center;
+      filter: blur(.5px);
+      text-shadow: 0 0 1px fuchsia, 0 0 2px fuchsia;
+      margin-bottom: 5em;
+   }
+
+   article{
+      @include flex-sa-c;
+      position: relative;
+
+      h4{
+         @include absoluteCenter;
+         font-size: 3rem;
+         filter: blur(.8px);
+         text-shadow: 0 0 2px fuchsia, 0 0 4px fuchsia, 0 0 8px fuchsia, 0 0 16px fuchsia;
+      }
+
+      section{
+         width:40%;
+         height:20vw;
+         @include flex-c-none;
+         flex-direction: column;
+
+         h2{
+            font-size: 3rem;
+            text-align: center;
+         }
+
+         p{
+            margin-bottom: 5em;
+            text-align: center;
+         }
+
+         &.logreg{
+            .logregBtn{
+               @include flex-sa-c;
+
+               button{
+                  padding:.7rem 0;
+                  width: 20%;
+                  font-size: 1.1rem;
+                  background: rgba(0,0,0,.9);
+                  outline: 0;
+                  border-radius: .5em;
+                  cursor: pointer;
+                  transition: .3s;
+
+                  &:hover{
+                     background: rgba(0,0,0,1);
+                  }
+               }
+
+               .btnreg{
+                  border:2px solid $hover-blue;
+                  color: $hover-blue;
+               }
+
+               .btnlog{
+                  border:2px solid $hover-orange;
+                  color: $hover-orange;
+               }
+            }
+         }
+
+         &.mailinp{
+            @include flex-sa-c;
+
+            .mailBtn{
+               width:30%;
+               padding:1.2em 0;
+               border: 3px solid $hover-blue;
+               border-radius: .7em;
+               background: rgba(0,0,0,.5);
+               background: $darkSoft-back-clr;
+               color:$light-font-clr;
+               text-transform: uppercase;
+               font-size: 1.2rem;
+               position: relative;
+               cursor: pointer;
+
+               span{
+                  @include absoluteCenter;
+                  z-index: 99999;
+               }
+
+               &::before,
+               &::after{
+                  transition: .5s;
+               }
+
+               &::before{
+                  content: '';
+                  position: absolute;
+                  left:50%; transform: translateX(-50%);
+                  top:-3px;
+                  height: calc(100% + 6px);
+                  width:80%;
+                  background: $darkSoft-back-clr;
+               }
+
+               &::after{
+                  content: '';
+                  position: absolute;
+                  left:-3px; 
+                  top:50%; transform: translateY(-50%);
+                  height: 60%;
+                  width:calc(100% + 6px);
+                  background: $darkSoft-back-clr;
+               }
+
+               &:hover{
+                  &::before{
+                     transform: translateX(-50%) scaleX(0);
+                  }
+
+                  &::after{
+                     transform: translateY(-50%) scaleY(0);
+                  }
+               }
+            }
+
+            p{
+               text-align: center;
+               margin: 0;
+               font-size: 1.1rem;
+            }
+
+            div{
+               @include flex-c-c;
+               width:100%;
+
+               svg{
+                  font-size: 3rem;
+               }
+
+               input{
+                  height:100%;
+                  width:70%;
+                  border:2px solid $hover-orange;
+                  border-radius: .5em;
+                  background: rgba(0,0,0,.5);
+                  padding:0 .5em;
+                  font-size: 1.2rem;
+                  color: $light-font-clr;
+                  outline: 0;
+                  transition: .3s;
+
+                  &:focus{
+                     box-shadow: 2px 2px 2px fuchsia, 2px 2px 4px fuchsia, 2px 2px 8px fuchsia;
+                     border-color: fuchsia;
+                  }
+               }
+            }                      
+         }
+      }
+   }
+}

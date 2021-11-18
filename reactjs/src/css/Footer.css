@@ -1,0 +1,140 @@
+.lineseparator {
+  display: block;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scrollup div {
+  background: #b8b9bb;
+  color: #141414;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .5em;
+  font-size: .8rem;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.scrollup:hover {
+  background-color: #b8b9bb;
+}
+
+.scrollup:hover svg {
+  color: black;
+}
+
+.scrollup:hover div {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollup svg {
+  font-size: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+footer {
+  border-top: 2px solid #b8b9bb;
+  padding: 2em 0;
+}
+
+footer .lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .lists ul {
+  list-style: none;
+}
+
+footer .lists ul li:first-child {
+  font-size: 2rem;
+}
+
+footer .lists ul li:not(:first-child) {
+  font-size: .9rem;
+  margin: 1em 0;
+}
+
+footer img {
+  display: block;
+  width: 10%;
+  margin: 0 auto 2em auto;
+}
+
+footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0;
+}
+
+footer .icons svg {
+  font-size: 3rem;
+  margin: 0 2em;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .icons svg:nth-child(1) {
+  color: #3c6998;
+}
+
+footer .icons svg:nth-child(2) {
+  color: #cc9035;
+}
+
+footer .icons svg:nth-child(3) {
+  color: #666;
+}
+
+footer .icons svg:nth-child(4) {
+  color: #34385c;
+}
+
+footer .icons svg:hover {
+  opacity: .5;
+}

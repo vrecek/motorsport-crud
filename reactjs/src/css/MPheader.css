@@ -1,0 +1,187 @@
+.lineseparator {
+  display: block;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scrollup div {
+  background: #b8b9bb;
+  color: #141414;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .5em;
+  font-size: .8rem;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.scrollup:hover {
+  background-color: #b8b9bb;
+}
+
+.scrollup:hover svg {
+  color: black;
+}
+
+.scrollup:hover div {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollup svg {
+  font-size: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main-header {
+  background: #303030;
+  height: calc(100vh - 80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-header section {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-header section .radios {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 150%);
+          transform: translate(-50%, 150%);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-header section .radios div {
+  height: 20px;
+  width: 20px;
+  border-radius: 1em;
+  background: gainsboro;
+  margin: .5em;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.main-header section .radios div.active {
+  background: #b34513;
+  pointer-events: none;
+}
+
+.main-header section.imagecont {
+  border: 2px solid black;
+  border-radius: 5%;
+  position: relative;
+}
+
+.main-header section.imagecont figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-header section.imagecont figure div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-header section.imagecont figure img {
+  width: 100%;
+}
+
+.main-header section h1 {
+  font-size: clamp(1rem, 5vw, 4rem);
+  font-weight: 200;
+}
+
+.main-header section p {
+  font-size: .9rem;
+  color: #b8b9bb;
+  margin: .8em 0 1.5em 0;
+}
+
+.main-header section div .btnclass {
+  margin-right: 1em;
+  padding: .7em 1.5em;
+  background: none;
+  border-radius: .2em;
+  color: #faf6f6;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main-header section div .btnclass:nth-child(1) {
+  border: 2px solid #008cff;
+}
+
+.main-header section div .btnclass:nth-child(2) {
+  border: 2px solid orange;
+}
+
+.main-header section div .btnclass:hover {
+  -webkit-box-shadow: 4px 4px 4px black;
+          box-shadow: 4px 4px 4px black;
+}
+
+.main-header section div .btnclass:nth-child(1):hover {
+  background: #18507e;
+}
+
+.main-header section div .btnclass:nth-child(2):hover {
+  background: #9b6b13;
+}

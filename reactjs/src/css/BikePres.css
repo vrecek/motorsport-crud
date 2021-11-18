@@ -1,0 +1,184 @@
+.lineseparator {
+  display: block;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scrollup div {
+  background: #b8b9bb;
+  color: #141414;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .5em;
+  font-size: .8rem;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.scrollup:hover {
+  background-color: #b8b9bb;
+}
+
+.scrollup:hover svg {
+  color: black;
+}
+
+.scrollup:hover div {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollup svg {
+  font-size: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.bikepres {
+  height: 35vw;
+}
+
+.bikepres h1 {
+  font-size: 3rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  margin: 1em 0 .5em 0;
+  text-align: center;
+  text-shadow: 0 0 2px black, 0 0 4px black, 0 0 8px black, 0 0 16px black;
+}
+
+.bikepres h3 {
+  text-align: center;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+
+.bikepres article {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bikepres article img {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bikepres article .circlecont {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bikepres article .circlecont.one .circle div {
+  left: 100%;
+}
+
+.bikepres article .circlecont.two .circle div {
+  right: 100%;
+}
+
+.bikepres article .circlecont .circle {
+  width: 15vw;
+  height: 40%;
+  border-radius: 50%;
+  border: 3px solid #b8b9bb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: relative;
+}
+
+.bikepres article .circlecont .circle div {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 50%;
+  background: #303030;
+  border: 3px solid #b8b9bb;
+  border-radius: 1em;
+  padding: 5%;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+}
+
+.bikepres article .circlecont .circle:hover {
+  background: #303030;
+}
+
+.bikepres article .circlecont .circle:hover div {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.bikepres article .circlecont .circle h4 {
+  font-size: clamp(0.5rem, 2vw, 2.5rem);
+  text-transform: uppercase;
+}
+
+.bikepres article .circlecont .circle h5 {
+  font-weight: 200;
+  font-size: clamp(0.8rem, 2vw, 2rem);
+}

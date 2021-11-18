@@ -1,0 +1,138 @@
+.lineseparator {
+  display: block;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scrollup div {
+  background: #b8b9bb;
+  color: #141414;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .5em;
+  font-size: .8rem;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.scrollup:hover {
+  background-color: #b8b9bb;
+}
+
+.scrollup:hover svg {
+  color: black;
+}
+
+.scrollup:hover div {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollup svg {
+  font-size: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.about {
+  margin-bottom: 4em;
+}
+
+.about h1 {
+  font-size: 2rem;
+  width: 40%;
+  text-align: center;
+  -webkit-filter: blur(0.8px);
+          filter: blur(0.8px);
+  margin: 0 auto 2em auto;
+  border-bottom: 2px solid #faf6f6;
+}
+
+.about section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5em;
+}
+
+.about section article {
+  width: 40%;
+  height: 30vw;
+  position: relative;
+}
+
+.about section article ul {
+  list-style: none;
+}
+
+.about section article ul li {
+  padding: 1em;
+  text-align: center;
+}
+
+.about section article ul li:nth-child(odd) {
+  background: #303030;
+}
+
+.about section article ul li span {
+  color: #df391b;
+}
+
+.about section article h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #faf6f6;
+}
+
+.about section article p:not(.bottom) {
+  margin-bottom: 2em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+.about section article p.bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #df391b;
+}
+
+.about section article iframe,
+.about section article img {
+  height: 100%;
+  width: 100%;
+}
