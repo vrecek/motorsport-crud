@@ -11,11 +11,11 @@ const NotifyScreen = () => {
       window.addEventListener('scroll', e => {
          let x = document.documentElement.scrollTop;
      
-         if(x >= 2836){
+         if(x >= 2836 && header.current !== null){
             header.current.style.letterSpacing='0px';
          }
        })
-   }, [header])
+   }, [])
 
    return (
       <section className='notifyscreen'>
@@ -24,7 +24,7 @@ const NotifyScreen = () => {
 
          <article>
             <section className='logreg'>
-               <div>
+               <div className='textCont'>
                   <h2>Login or Register</h2>
                   <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis!</p>
                </div>

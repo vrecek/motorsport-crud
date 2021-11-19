@@ -68,6 +68,17 @@ footer {
   padding: 2em 0;
 }
 
+footer a {
+  text-decoration: none;
+  color: #b8b9bb;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+footer a:hover {
+  color: #008cff;
+}
+
 footer .lists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,7 +95,7 @@ footer .lists ul {
 }
 
 footer .lists ul li:first-child {
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
 footer .lists ul li:not(:first-child) {
@@ -94,11 +105,20 @@ footer .lists ul li:not(:first-child) {
 
 footer img {
   display: block;
-  width: 10%;
+  width: 100px;
   margin: 0 auto 2em auto;
 }
 
 footer .icons {
+  margin: 1em 0 4em 0;
+}
+
+footer .icons h2 {
+  text-align: center;
+  font-size: .8rem;
+}
+
+footer .icons div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,33 +128,40 @@ footer .icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
-footer .icons svg {
-  font-size: 3rem;
+footer .icons div svg {
+  width: clamp(30px, 4vw, 100px);
+  height: 50px;
   margin: 0 2em;
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-footer .icons svg:nth-child(1) {
+footer .icons div svg:nth-child(1) {
   color: #3c6998;
 }
 
-footer .icons svg:nth-child(2) {
+footer .icons div svg:nth-child(2) {
   color: #cc9035;
 }
 
-footer .icons svg:nth-child(3) {
+footer .icons div svg:nth-child(3) {
   color: #666;
 }
 
-footer .icons svg:nth-child(4) {
+footer .icons div svg:nth-child(4) {
   color: #34385c;
 }
 
-footer .icons svg:hover {
+footer .icons div svg:hover {
   opacity: .5;
+}
+
+@media (max-width: 480px) {
+  footer .icons div svg {
+    margin: 0 1em;
+  }
 }

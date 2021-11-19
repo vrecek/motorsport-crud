@@ -81,6 +81,7 @@
 
 .offer p.infp {
   margin-bottom: 2em;
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .offer section {
@@ -103,18 +104,36 @@
   position: relative;
 }
 
+.offer section .cardclass:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.offer section .cardclass img {
+  position: absolute;
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.offer section .cardclass img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .offer section .cardclass.drk {
   text-shadow: 3px 3px 3px black;
 }
 
 .offer section .cardclass h3 {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 3vw, 2.5rem);
   text-align: center;
 }
 
 .offer section .btnclass {
-  padding: .5em 2em;
-  font-size: 1.1rem;
+  padding: .5em 0;
+  font-size: clamp(0.7rem, 2vw, 1.1rem);
+  width: 80%;
   border-radius: 1em;
   border: 2px solid #008cff;
   background: #141414;
@@ -152,6 +171,23 @@
   border-radius: 1em;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media (max-width: 480px) {
+  .offer p.infp {
+    padding: 0 .5em;
+  }
+  .offer section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer section .cardclass {
+    margin-bottom: 1em;
+    width: 70%;
+    height: 50vw;
+  }
 }
 
 @-webkit-keyframes anim {

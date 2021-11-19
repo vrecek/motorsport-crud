@@ -80,7 +80,7 @@
 }
 
 .fillmetric section h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   border-bottom: 2px solid #faf6f6;
   margin-bottom: 1em;
   font-weight: 100;
@@ -121,7 +121,6 @@
 }
 
 .fillmetric section.barscont .bar .fill {
-  width: 100%;
   background: #2e2786;
   position: absolute;
   bottom: 0;
@@ -167,10 +166,97 @@
           transform: translate(-100%, -50%) rotate(225deg);
 }
 
+.fillmetric section.barscont .bar .fill2 {
+  background: #2e2786;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.fillmetric section.barscont .bar .fill2::before {
+  content: attr(per);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .9rem;
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  border: 1px solid #faf6f6;
+  border-radius: .3em;
+  left: 100%;
+  top: 0;
+  -webkit-transform: translate(-50%, -130%);
+          transform: translate(-50%, -130%);
+  background: #141414;
+  z-index: 99;
+}
+
+.fillmetric section.barscont .bar .fill2::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #faf6f6;
+  left: 100%;
+  top: 0;
+  -webkit-transform: translate(-50%, -130%) rotate(225deg);
+          transform: translate(-50%, -130%) rotate(225deg);
+}
+
 .fillmetric section.barscont .bar span {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 150%);
           transform: translate(-50%, 150%);
   bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .fillmetric {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .fillmetric section {
+    width: 90%;
+    margin-bottom: 2em;
+  }
+  .fillmetric section h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .fillmetric section h1 {
+    text-align: center;
+  }
+  .fillmetric section p {
+    text-align: justify;
+  }
+  .fillmetric section.barscont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .fillmetric section.barscont .bar {
+    width: 80%;
+    height: 40px;
+    margin: 2em 0;
+  }
+  .fillmetric section.barscont .bar .fill {
+    height: 20px;
+    width: 100%;
+  }
 }

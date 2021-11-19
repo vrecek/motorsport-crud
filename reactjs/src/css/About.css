@@ -91,7 +91,6 @@
 
 .about section article {
   width: 40%;
-  height: 30vw;
   position: relative;
 }
 
@@ -116,12 +115,14 @@
   font-size: 1.7rem;
   margin-bottom: 1em;
   border-bottom: 2px solid #faf6f6;
+  text-align: center;
 }
 
 .about section article p:not(.bottom) {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .about section article p.bottom {
@@ -131,8 +132,43 @@
   color: #df391b;
 }
 
+.about section article.iframeCont {
+  height: 30vw;
+}
+
 .about section article iframe,
 .about section article img {
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .about section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about section article {
+    width: 90%;
+  }
+  .about section article p {
+    text-align: justify;
+  }
+  .about section article p.bottom {
+    position: static;
+  }
+  .about section article.saloonImg {
+    display: none;
+  }
+  .about section article.iframeCont {
+    height: 60vw;
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about h1 {
+    width: 80%;
+  }
 }

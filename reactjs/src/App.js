@@ -4,6 +4,7 @@ import MainPage from './components/Pages/MainPage';
 import ScrollUp from './components/Layout/ScrollUp';
 import './css/index.css'
 import { useState } from 'react'
+import { Route, Routes } from 'react-router';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -18,9 +19,13 @@ function App() {
     <Layout>
 
       { visible && <ScrollUp /> }
-      
-      <MainPage />
-      
+
+      <Routes>
+
+        <Route path='/' element={ <MainPage /> } />
+
+      </Routes>
+        
     </Layout>
   );
 }

@@ -8,7 +8,7 @@
       width:40%;
 
       h1{
-         font-size: 2.5rem;
+         font-size: clamp(1.5rem,5vw,2.5rem);
          border-bottom: 2px solid $light-font-clr;
          margin-bottom: 1em;
          font-weight: 100;
@@ -39,7 +39,6 @@
             position: relative;
 
             .fill{
-               width:100%;
                background: rgb(46, 39, 134);
                position: absolute;
                bottom:0;
@@ -74,6 +73,42 @@
                }
             }
 
+            .fill2{
+               background: rgb(46, 39, 134);
+               position: absolute;
+               bottom:0;
+               height:0;
+               width:0;
+               transition: 3s;
+
+               &::before{
+                  content: attr(per);
+                  @include flex-c-c;
+                  font-size: .9rem;
+                  position: absolute;
+                  width:35px;
+                  height:25px;
+                  border: 1px solid $light-font-clr;
+                  border-radius: .3em;
+                  left:100%;
+                  top:0;
+                  transform: translate(-50%, -130%);
+                  background: $dark-back-clr;
+                  z-index: 99;
+               }
+
+               &::after{
+                  content: '';
+                  position: absolute;
+                  width:10px;
+                  height:10px;
+                  border: 1px solid $light-font-clr;
+                  left:100%;
+                  top:0;
+                  transform: translate(-50%, -130%) rotate(225deg);
+               }
+            }
+
             span{
                position: absolute;
                left:50%;
@@ -84,3 +119,47 @@
       }
    }
 }
+
+@media (max-width: 768px){
+   .fillmetric{
+      flex-direction: column;
+
+      section{
+         width:90%;
+         margin-bottom: 2em;
+
+         h1{
+            text-align: center;
+         }
+      }
+   }
+}
+
+@media (max-width: 480px){
+   .fillmetric{
+      section{
+         h1{
+            text-align: center;
+         }
+
+         p{
+            text-align: justify;
+         }
+
+         &.barscont{
+            flex-direction: column;
+            
+            .bar{
+               width:80%;
+               height: 40px;
+               margin:2em 0;
+               
+               .fill{
+                  height:20px;
+                  width:100%;
+               }
+            }
+         }
+      }
+   }
+} 

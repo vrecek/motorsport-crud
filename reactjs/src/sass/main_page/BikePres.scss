@@ -1,10 +1,10 @@
 @import '../config';
 
 .bikepres{
-   height:35vw;
+   min-height:35vw;
 
    h1{
-      font-size: 3rem;
+      font-size: clamp(2rem,4vw,3rem);
       font-family: 'Raleway', sans-serif;
       font-weight: 100;
       margin:1em 0 .5em 0;
@@ -33,6 +33,7 @@
 
       .circlecont{
          width:25%;
+         height:35vw;
          @include flex-sa-c;
          flex-direction: column;
 
@@ -62,15 +63,17 @@
                position: absolute;  
                top:50%;
                transform: translateY(-50%);
-               width:100%;
-               height:50%;
+               width:200%;
+               height:100%;
                background: $darkSoft-back-clr;
                border:3px solid $lightGrey-font-clr;
                border-radius: 1em;
                padding:5%;
                pointer-events: none;
                transition: .3s;
-               opacity: 0;
+               opacity:0;
+               font-size: clamp(.5rem, 2vw, 1rem);
+               z-index: 999;
             }
 
             &:hover{
@@ -94,3 +97,51 @@
       }
    }
 }
+
+@media (max-width: 480px){
+   .bikepres{
+      .lineseparator{
+         display: none;
+      }
+
+      article{
+         flex-direction: column;
+         min-height:40vw;
+
+         img{
+            position: static;
+            margin:0 auto;
+            display: block;
+            width:100%;
+            transform: translateX(0);
+         }
+
+         .circlecont{
+            flex-direction: row;
+            width:100%;
+            margin:1em 0;
+
+            .circle{
+               width:35vw;
+               height:100%;
+               position: static;
+
+               div{
+                  display: none;
+               }
+
+               h4{
+                  font-size: clamp(.7rem,4vw,1rem);
+               }
+   
+               h5{
+                  font-size: clamp(.8rem,4vw,1rem);
+               }
+            }
+         }
+      }
+   }
+
+   
+   
+} 

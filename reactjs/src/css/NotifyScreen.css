@@ -66,7 +66,7 @@
 .notifyscreen {
   background: url("../images/car.gif");
   background-size: cover;
-  height: 100vh;
+  height: 50vw;
   width: 100%;
   padding: 2em 0;
   margin-bottom: 4em;
@@ -74,7 +74,7 @@
 
 .notifyscreen h1 {
   text-align: center;
-  font-size: 4rem;
+  font-size: clamp(1.1rem, 6vw, 4rem);
   font-weight: 200;
   -webkit-filter: blur(1px);
           filter: blur(1px);
@@ -95,6 +95,7 @@
           filter: blur(0.5px);
   text-shadow: 0 0 1px fuchsia, 0 0 2px fuchsia;
   margin-bottom: 5em;
+  font-size: clamp(0.6rem, 2vw, 1rem);
 }
 
 .notifyscreen article {
@@ -137,13 +138,15 @@
 }
 
 .notifyscreen article section h2 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   text-align: center;
 }
 
 .notifyscreen article section p {
   margin-bottom: 5em;
   text-align: center;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  text-shadow: 1px 1px 1px black;
 }
 
 .notifyscreen article section.logreg .logregBtn {
@@ -159,8 +162,8 @@
 
 .notifyscreen article section.logreg .logregBtn button {
   padding: .7rem 0;
-  width: 20%;
-  font-size: 1.1rem;
+  width: clamp(100px, 10vw, 150px);
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
   background: rgba(0, 0, 0, 0.9);
   outline: 0;
   border-radius: .5em;
@@ -194,8 +197,12 @@
           align-items: center;
 }
 
+.notifyscreen article section.mailinp div {
+  margin: 1em 0;
+}
+
 .notifyscreen article section.mailinp .mailBtn {
-  width: 30%;
+  width: clamp(120px, 10vw, 150px);
   padding: 1.2em 0;
   border: 3px solid #008cff;
   border-radius: .7em;
@@ -203,7 +210,7 @@
   background: #303030;
   color: #faf6f6;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   position: relative;
   cursor: pointer;
 }
@@ -297,4 +304,36 @@
   -webkit-box-shadow: 2px 2px 2px fuchsia, 2px 2px 4px fuchsia, 2px 2px 8px fuchsia;
           box-shadow: 2px 2px 2px fuchsia, 2px 2px 4px fuchsia, 2px 2px 8px fuchsia;
   border-color: fuchsia;
+}
+
+@media (max-width: 768px) {
+  .notifyscreen {
+    height: auto;
+  }
+  .notifyscreen article section {
+    width: 100%;
+  }
+  .notifyscreen article section.mailinp {
+    display: none;
+  }
+  .notifyscreen article h4 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifyscreen h1 {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  .notifyscreen p.hdrpara {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  .notifyscreen article section.logreg div.textCont {
+    display: none;
+  }
+  .notifyscreen article section.logreg .logregBtn button {
+    padding: .5rem 0;
+  }
 }

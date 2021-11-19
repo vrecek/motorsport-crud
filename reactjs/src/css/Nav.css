@@ -86,7 +86,6 @@
 }
 
 .nav1 figure img {
-  width: 100%;
   height: 100%;
 }
 
@@ -121,4 +120,23 @@
 
 .nav1 a.home:hover {
   color: #008cff;
+}
+
+@media (max-width: 768px) {
+  .nav1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: .5em 0;
+  }
+  .nav1 ul {
+    margin-top: 1em;
+  }
+  .nav1 ul a {
+    font-size: clamp(0.7rem, 3vw, 1rem);
+  }
+  .nav1 li {
+    margin: 0 .5em;
+  }
 }

@@ -18,7 +18,6 @@
 
       article{
          width: 40%;
-         height: 30vw;
          position: relative;
 
          ul{
@@ -42,13 +41,15 @@
             font-size: 1.7rem;
             margin-bottom: 1em;
             border-bottom: 2px solid $light-font-clr;
+            text-align: center;
          }
 
          p{
             &:not(.bottom){
-               margin-bottom: 2em;
+               margin-bottom: 1em;
                font-family: 'Raleway', sans-serif;
                font-weight: 100;
+               font-size: clamp(.8rem,1vw,1rem);
             }
             
             &.bottom{
@@ -56,7 +57,12 @@
                right:0;
                bottom:0;
                color: $mark-font-clr;
+               
             }
+         }
+
+         &.iframeCont{
+            height:30vw;
          }
 
          iframe,
@@ -64,6 +70,43 @@
             height:100%;
             width:100%;
          }
+      }
+   }
+}
+
+@media (max-width: 1024px){
+   .about{
+      section{
+         flex-direction: column;
+
+         article{
+            width:90%;
+
+            p{
+               text-align: justify;
+
+               &.bottom{
+                  position: static;
+               }
+            }
+
+            &.saloonImg{
+               display: none;
+            }
+
+            &.iframeCont{
+               height:60vw;
+               margin-top:1em;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .about{
+      h1{
+         width:80%;
       }
    }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../css/Nav.css'
 import logo from '../../images/logo.png'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
    return (
@@ -13,10 +14,10 @@ const Nav = () => {
             </figcaption>
          </figure>
          <ul>
-            <li> <a className='home' href='/'> Homepage </a> </li>
-            <li> <a href='/'> Catalog </a> </li>
-            <li> <a href='/'> Favourites </a> </li>
-            <li> <a href='/'> About </a> </li>
+            <li> <Link to='/' className='home' > Homepage </Link> </li>
+            <li> <Link to='/catalog'> Catalog </Link> </li>
+            <li> <Link to='/favourites'> Favourites </Link> </li>
+            <li> <Link to='/about'> About </Link> </li>
          </ul>
       </nav>
    )

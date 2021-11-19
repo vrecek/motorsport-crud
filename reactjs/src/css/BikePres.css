@@ -64,11 +64,11 @@
 }
 
 .bikepres {
-  height: 35vw;
+  min-height: 35vw;
 }
 
 .bikepres h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   margin: 1em 0 .5em 0;
@@ -103,6 +103,7 @@
 
 .bikepres article .circlecont {
   width: 25%;
+  height: 35vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,8 +153,8 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 100%;
-  height: 50%;
+  width: 200%;
+  height: 100%;
   background: #303030;
   border: 3px solid #b8b9bb;
   border-radius: 1em;
@@ -162,6 +163,8 @@
   -webkit-transition: .3s;
   transition: .3s;
   opacity: 0;
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  z-index: 999;
 }
 
 .bikepres article .circlecont .circle:hover {
@@ -181,4 +184,47 @@
 .bikepres article .circlecont .circle h5 {
   font-weight: 200;
   font-size: clamp(0.8rem, 2vw, 2rem);
+}
+
+@media (max-width: 480px) {
+  .bikepres .lineseparator {
+    display: none;
+  }
+  .bikepres article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 40vw;
+  }
+  .bikepres article img {
+    position: static;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .bikepres article .circlecont {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    margin: 1em 0;
+  }
+  .bikepres article .circlecont .circle {
+    width: 35vw;
+    height: 100%;
+    position: static;
+  }
+  .bikepres article .circlecont .circle div {
+    display: none;
+  }
+  .bikepres article .circlecont .circle h4 {
+    font-size: clamp(0.7rem, 4vw, 1rem);
+  }
+  .bikepres article .circlecont .circle h5 {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
 }

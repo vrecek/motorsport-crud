@@ -10,12 +10,13 @@ const MPHeader = () => {
    const images = [carLast, car1, car2, carLast];
    const imgCont = useRef(null);
    const radios = useRef(null);
-   let slide = null;
-
    const num = images.slice(0,images.length - 1);
+   let slide = null;
    let counter = 0;
-
+   
    function changeImg(nr, click=null){
+      if(imgCont.current == null) return;
+
       if(click){
          clearInterval(slide);
          slide = setInterval(() => { // NORMAL ROUTE
@@ -40,6 +41,7 @@ const MPHeader = () => {
    }
 
    useEffect(()=>{
+
       radios.current.childNodes[0].className = 'active';
 
       // eslint-disable-next-line
@@ -58,7 +60,7 @@ const MPHeader = () => {
          }
       })
       
-   }, [counter] );  
+   }, [] );  
    
 
    return (
