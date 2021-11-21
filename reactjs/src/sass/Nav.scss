@@ -32,11 +32,16 @@
       transition: .2s;
       font-weight: 200;
 
+      &.addLink{
+         color:$mark-font-clr;
+      }
+
       &:hover{
          color: $hover-orange;
       }
 
-      &.home:hover{
+      &.home:hover,
+      &.addLink:hover{
          color: $hover-blue;
       }
    }

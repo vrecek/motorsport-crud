@@ -1,0 +1,62 @@
+@import './config';
+
+.errCont{
+   padding:2em 0;
+   @include flex-c-c;
+   flex-direction: column;
+
+   img{
+      height:10vw;
+      margin-bottom: 1em;
+      min-width: 80px;
+      min-height: 80px;
+   }
+
+   .errtext{
+      margin:3em 0;
+      text-align: center;
+
+      h1{
+         color: $mark-font-clr;
+         font-size: clamp(1.5rem,3vw,3rem);
+         border-bottom: 2px solid $mark-font-clr;
+         margin-bottom: .5em;
+      }
+   
+      p{
+         color: $mark-font-clr;
+         font-size: clamp(.8rem,3vw,1rem);
+
+         a{
+            color:goldenrod;
+            text-decoration: none;
+
+            &:hover{
+               color:rgb(105, 75, 0);
+            }
+         }
+      }
+   }
+
+   .innercont{
+      background: $darkSoft-back-clr;
+      padding:1em 2em;
+      border-radius: .2em;
+
+      div{
+         margin:2em 0;
+
+         h2{
+            color: $lightGrey-font-clr;
+            border-bottom: 1px solid $lightGrey-font-clr;
+            margin-bottom: .1em;
+         }
+
+         span{
+            font-size: .9rem;
+         }
+      }
+   }
+
+   
+}

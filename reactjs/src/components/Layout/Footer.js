@@ -23,8 +23,8 @@ const Footer = () => {
                <li>Links</li>
                <li> <Link to='/'> homepage </Link> </li>
                <li> <Link to='/catalog'> catalog </Link> </li>
-               <li> <Link to='/favourites'> favourites </Link> </li>
-               <li> <Link to='/about'> about </Link> </li>
+               <li> <Link to='/cart'> cart </Link> </li>
+               <li> <Link to='/add-new'> add product </Link> </li>
             </ul>
 
             <ul>

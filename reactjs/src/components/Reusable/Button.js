@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ text, action, classn }) => {
+const Button = ({ text, action, classn, fSize, fWeight }) => {
    return (
       <button 
          style={ classn === '' ? defStyle : null } 
          className={ classn === '' ? null : classn }
          onClick={ action }>
 
-         <span>{ text }</span>
+         <span style={{ fontSize: fSize, fontWeight: fWeight }}>{ text }</span>
       </button>
    )
 }
@@ -21,7 +21,9 @@ Button.propTypes = {
 Button.defaultProps = {
    action: () => { console.log(`default clicked`) },
    text: "Button",
-   classn: ''
+   classn: '',
+   fSize: '1rem',
+   fWeight: '300'
 }
 
 const defStyle = {

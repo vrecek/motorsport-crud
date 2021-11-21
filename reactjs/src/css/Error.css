@@ -63,33 +63,8 @@
   transition: .3s;
 }
 
-.nav1 {
-  background: #303030;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav1 figure {
-  height: 5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav1 figure img {
-  height: 100%;
-}
-
-.nav1 ul {
+.errCont {
+  padding: 2em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,48 +74,61 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.nav1 li {
-  margin: 0 1em;
+.errCont img {
+  height: 10vw;
+  margin-bottom: 1em;
+  min-width: 80px;
+  min-height: 80px;
 }
 
-.nav1 a {
-  color: #faf6f6;
-  text-decoration: none;
-  -webkit-transition: .2s;
-  transition: .2s;
-  font-weight: 200;
+.errCont .errtext {
+  margin: 3em 0;
+  text-align: center;
 }
 
-.nav1 a.addLink {
+.errCont .errtext h1 {
   color: #df391b;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  border-bottom: 2px solid #df391b;
+  margin-bottom: .5em;
 }
 
-.nav1 a:hover {
-  color: orange;
+.errCont .errtext p {
+  color: #df391b;
+  font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
-.nav1 a.home:hover, .nav1 a.addLink:hover {
-  color: #008cff;
+.errCont .errtext p a {
+  color: goldenrod;
+  text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .nav1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: .5em 0;
-  }
-  .nav1 ul {
-    margin-top: 1em;
-  }
-  .nav1 ul a {
-    font-size: clamp(0.7rem, 3vw, 1rem);
-  }
-  .nav1 li {
-    margin: 0 .5em;
-  }
+.errCont .errtext p a:hover {
+  color: #694b00;
+}
+
+.errCont .innercont {
+  background: #303030;
+  padding: 1em 2em;
+  border-radius: .2em;
+}
+
+.errCont .innercont div {
+  margin: 2em 0;
+}
+
+.errCont .innercont div h2 {
+  color: #b8b9bb;
+  border-bottom: 1px solid #b8b9bb;
+  margin-bottom: .1em;
+}
+
+.errCont .innercont div span {
+  font-size: .9rem;
 }

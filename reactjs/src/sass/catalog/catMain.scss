@@ -1,0 +1,33 @@
+.catMain{
+   padding:2em;
+
+   .catTitle,
+   .catDesc{
+      text-align: center;
+   }
+
+   .catTitle{
+      font-size: clamp(1.5rem,3vw,2.7rem);
+      margin-top: 1em;
+   }
+
+   .catDesc{
+      font-size: .9rem;
+      margin-bottom: 1em;
+   }
+
+   .mainCont{
+      margin:0 auto;
+      width:80%;
+   }
+
+}
+
+@media (max-width: 768px){
+   .catMain{
+      padding:0;
+      .mainCont{
+         width:100%;
+      }
+   }
+}

@@ -1,0 +1,93 @@
+@import '../config';
+
+.filtercol{
+   background: $darkSoft-back-clr;
+   padding:.8em 1em;
+
+   svg{
+      display: none;
+      cursor: pointer;
+   }
+
+   h4{
+      border-right: 2px solid $lightGrey-font-clr;
+      padding-right: .5em;
+      font-weight: 600;
+   }
+
+   form{
+      @include flex-sa-c;
+      div{
+         width:20%;
+      }
+
+      label{
+         margin-right: .3em;
+         font-size: .9rem;
+         font-weight: 200;
+         text-align: center;
+      }
+
+      select{
+         border:2px solid $hover-blue; border-width: 0 0 2px 0;
+         color: $hover-blue;
+         width:50%;
+         background: none;
+         cursor: pointer;
+         outline: 0;
+         font-weight: 600;
+
+         option{
+            color:black;
+            font-weight: 600;
+         }
+      }
+
+      .filtBtn{
+         width:6em;
+         font-size: 1.1rem;
+         background: none;
+         padding:.4em 0;
+         border:2px solid $hover-orange;
+         border-radius: .3em;
+         cursor: pointer;
+         color: $hover-orange;
+         background: rgba($color: #000000, $alpha: .2);
+         transition: .3s;
+
+         &:hover{
+            background: rgba($color: #000000, $alpha: .5);
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px){
+   .filtercol{
+      h4{
+         display: none;
+      }
+
+      form{
+         div{
+            width:auto;
+         }
+      }
+   }
+}
+
+@media (max-width: 480px){
+   .filtercol{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      form{
+         display: none;
+      }
+
+      svg{
+         display: inline;
+         font-size: 1.5rem;
+      }
+   }
+} 

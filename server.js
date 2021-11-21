@@ -1,28 +1,16 @@
 const express = require('express');
+require('dotenv/config');
+const mongoose = require('mongoose');
 const app = express();
-const dummy = [
-   {
-      title: "title1",
-      desc: "desc1"
-   },
-   {
-      title: "title1",
-      desc: "desc1"
-   },
-   {
-      title: "title1",
-      desc: "desc1"
-   },
-   {
-      title: "title1",
-      desc: "desc1"
-   }
-]
+
+mongoose.connect(process.env.DB, { useNewUrlParser: true }, () => { console.log('Connected to base') });
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use('/items', require('./routes/item'));
 
 app.get('/', (req,res) => {
-   res.json(dummy);
+   res.send('main page');
 })
 
 

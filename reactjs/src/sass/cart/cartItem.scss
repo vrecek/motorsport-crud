@@ -1,0 +1,125 @@
+@import '../config';
+
+.cartItem{
+   border:3px solid $dark-back-clr;
+   border-radius: .2em;
+   padding:.5em;
+   height:11vw;
+   background: #2c2c2c;
+   display: flex;
+   position: relative;
+
+   .loadCl{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0;
+      top:0;
+      background: rgba($color: #000000, $alpha: .7);
+
+      img{
+         @include absoluteCenter;
+         height: 100%;
+      }
+   }
+   
+   &:not(:last-child){
+      margin-bottom: 3em;
+   }
+
+   div{
+      &.cartImg{
+         width:20%;
+         height:100%;
+
+         img{
+            width:100%;
+            height:100%;
+            border:2px solid rgb(151, 98, 0);
+         }
+      }
+
+      &.cartText{
+         width:80%;
+         padding: .2em 0;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         flex-direction: column;
+
+         div{
+            width:100%;
+
+            &.cartInfo{
+               text-align: center;           
+
+               span{
+                  font-size: clamp(.9rem,2vw,1.5rem);
+                  margin:0 .3em;
+               }
+            }
+
+            .cartBtn{
+               background: none;
+               border:2px solid $mark-font-clr;
+               color: $mark-font-clr;
+               padding:1% 0;
+               width:40%;
+               margin:0 auto;
+               display: block;
+               cursor: pointer;
+               border-radius: .3em;
+               transition: .3s;
+
+               &:hover{
+                  background: rgba($color: #000000, $alpha: .5);
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .cartItem{
+      height:120px;
+
+      div{
+         &.cartImg{
+            width:135px;
+         }
+      }
+   }
+}
+
+@media (max-width: 480px){
+   .cartItem{
+      flex-direction: column;
+      height:auto;
+      padding:0;
+
+      div{
+         &.cartImg{
+            width: 100%;
+         }
+
+         &.cartText{
+            width:100%;
+
+            div{
+               &.cartInfo{
+                  margin-bottom: .5em;
+
+                  span{
+                     font-size: clamp(1rem,6vw,2rem);
+                  }
+               }
+
+               .cartBtn{
+                  width: 80%;
+               }
+            }
+         }
+      }
+   }
+} 

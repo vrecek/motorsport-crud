@@ -1,0 +1,105 @@
+@import '../config';
+
+.colCont{
+   background: rgba($color: #222222, $alpha: 1);
+   @include flex-sa-c;
+   flex-wrap: wrap;
+   padding-top: 2em;
+   
+   .item{
+      width:30%;
+      height:30vw;
+      margin-bottom: 5em;
+      background: #303030;
+      position: relative;
+
+      .loadCl{
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         left:0;
+         top:0;
+         background: rgba($color: #000000, $alpha: .7);
+
+         img{
+            @include absoluteCenter;
+         }
+      }
+      
+      section{
+         height:50%;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-direction: column;
+         padding:0 2em;
+
+         div{
+            text-align: center;
+            width:100%;
+
+            h6{
+               font-size: clamp(.8rem,1.5vw,1.2rem);
+               border-bottom: 2px solid $hover-blue;
+               margin-bottom: .5em;
+               padding-bottom: .2em;
+            }
+
+            h5{
+               font-size: clamp(.8rem,1.5vw,1.4rem);
+               width: 100%;
+            }
+         }
+
+         .cartBtn{
+            width:100%;
+            background: none;
+            border-radius: .3em;
+            padding:.5em 0;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover{
+               background: rgba($color: #000000, $alpha: .5);
+            }
+         }
+
+         .btOrang{
+            border:2px solid $hover-orange;
+            color: $hover-orange;
+         }
+
+         .btRed{
+            border:2px solid $mark-font-clr;
+            color: $mark-font-clr;
+         }
+      }
+
+      .image{
+         height: 50%;
+
+         img{
+            width:100%;
+            height:100%;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .colCont{
+      .item{
+         width:200px;
+         height:250px;
+         margin:0 .5em .7em 0;
+      }
+   }
+}
+
+@media (max-width: 480px){
+   .colCont{
+      .item{
+         margin:0 0em .7em 0;
+      }
+   }
+} 

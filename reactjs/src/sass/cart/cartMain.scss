@@ -1,0 +1,43 @@
+@import '../config';
+
+.cart{
+   width: 70%;
+   margin: 2em auto;
+
+   h1,
+   p.pDesc{
+      text-align: center;
+   }
+
+   h1{
+      font-size: clamp(1.5rem,3vw,2.8rem);
+   }
+
+   p.pDesc{
+      font-size: clamp(.7rem,2vw,.9rem);
+   }
+
+   .cartCont{
+      background: rgba($color: #222222, $alpha: 1);
+      padding:1.5em 1em;
+
+      .emptyCart{
+         font-size: 2rem;
+         color: $mark-font-clr;
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .cart{
+      width:100%;
+   }
+}
+
+@media (max-width: 480px){
+   .cart{
+      .cartCont{
+         padding:1.5em 0;
+      }
+   }
+} 

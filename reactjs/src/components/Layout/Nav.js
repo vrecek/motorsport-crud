@@ -16,8 +16,8 @@ const Nav = () => {
          <ul>
             <li> <Link to='/' className='home' > Homepage </Link> </li>
             <li> <Link to='/catalog'> Catalog </Link> </li>
-            <li> <Link to='/favourites'> Favourites </Link> </li>
-            <li> <Link to='/about'> About </Link> </li>
+            <li> <Link to='/cart'> Cart </Link> </li>
+            <li> <Link to='/add-new' className='addLink' > Add </Link> </li>
          </ul>
       </nav>
    )

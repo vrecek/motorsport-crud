@@ -1,0 +1,32 @@
+.catMain {
+  padding: 2em;
+}
+
+.catMain .catTitle,
+.catMain .catDesc {
+  text-align: center;
+}
+
+.catMain .catTitle {
+  font-size: clamp(1.5rem, 3vw, 2.7rem);
+  margin-top: 1em;
+}
+
+.catMain .catDesc {
+  font-size: .9rem;
+  margin-bottom: 1em;
+}
+
+.catMain .mainCont {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .catMain {
+    padding: 0;
+  }
+  .catMain .mainCont {
+    width: 100%;
+  }
+}
