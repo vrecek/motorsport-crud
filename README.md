@@ -1,12 +1,13 @@
 # Project created using React.js + Express.js
-This is car / motorsport site with pseudo cart
+This is car / motorsport CRUD site
 
 # Site is using mongoDB
-To fetch products and add them to cart
+To making operations on products
 
 # Features
-Fetching from db
-Adding / removing from cart,
+Built main page,
+Fetching from db,
 Loading gif when processing request,
 Error page,
-Adding products to db
+Admin 'panel',
+CRUD
