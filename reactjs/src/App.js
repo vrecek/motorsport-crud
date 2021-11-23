@@ -5,6 +5,8 @@ import Catalog from './components/Pages/Catalog'
 import Cart from './components/Pages/Cart';
 import ScrollUp from './components/Layout/ScrollUp';
 import ErrorMes from './components/Pages/ErrorMes';
+import AddProduct from './components/Pages/AddProduct';
+import ModifyProduct from './components/Pages/ModifyProduct';
 import './css/index.css'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router';
@@ -33,7 +35,9 @@ function App() {
 
         <Route path='/cart' element={ <Cart /> } />
 
-        {/* <Route path='/add-new' element={ <AddProduct /> } /> */}
+        <Route path='/add-new' element={ <AddProduct /> } />
+
+        <Route path='/mod-prod' element={ <ModifyProduct /> } />
 
       </Routes>
         

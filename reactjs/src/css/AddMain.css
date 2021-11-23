@@ -1,0 +1,145 @@
+.lineseparator {
+  display: block;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5em;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scrollup div {
+  background: #b8b9bb;
+  color: #141414;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .5em;
+  font-size: .8rem;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.scrollup:hover {
+  background-color: #b8b9bb;
+}
+
+.scrollup:hover svg {
+  color: black;
+}
+
+.scrollup:hover div {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollup svg {
+  font-size: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.addProd {
+  padding: 2em 0;
+}
+
+.addProd .addText {
+  text-align: center;
+}
+
+.addProd .addText h1 {
+  font-size: clamp(1.5rem, 8vw, 2.5rem);
+  padding: 0 .5em;
+}
+
+.addProd .addText p {
+  color: #df391b;
+}
+
+.addProd .addContent {
+  width: 60%;
+  background: #101010;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.addProd .addContent button {
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.addProd .addContent button:hover {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.addProd .addContent div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3em 0;
+}
+
+.addProd .addContent div:first-child {
+  margin: 0;
+}
+
+.addProd .addContent div label {
+  margin-bottom: 1em;
+  font-size: .9rem;
+  color: #3060fd;
+  text-shadow: 0 0 1px blue,0 0 2px blue,0 0 4px blue,0 0 6px blue;
+  font-weight: 200;
+}
+
+.addProd .addContent div input {
+  background: rgba(12, 12, 12, 0.5);
+  outline: 0;
+  border: 2px solid #3060fd;
+  border-width: 0 0 2px 0;
+  color: #b8b9bb;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: .5em 1em;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.addProd .addContent div input:focus {
+  background: black;
+}
+
+@media (max-width: 480px) {
+  .addProd .addContent {
+    width: 100%;
+    padding: 1em;
+  }
+}

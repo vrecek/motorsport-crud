@@ -1,0 +1,112 @@
+@import '../config';
+
+.editSec{
+   position: absolute;
+   left:0;
+   top:0;
+   width:100%;
+   height:100%;
+   background: rgba($color: #000000, $alpha: .7);
+
+   form{
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      width:50%;
+      height:70%;
+      border:2px solid rgb(90, 90, 90);
+      border-radius: .3em;
+      background: $darkSoft-back-clr;
+      padding:1em;
+
+      label{
+         display: block;
+         text-align: center;
+         margin-bottom: 1em;
+      }
+
+      p{
+         margin-bottom: 1em;
+         font-size: 1.1rem;
+         color:$blue-font-clr;
+         text-shadow: 0 0 1px blue,0 0 2px blue,0 0 4px blue,0 0 6px blue;
+         font-weight: 200;
+      }
+
+      div{
+         margin-bottom: 3em;
+
+         input{
+            background: rgba($color: #0c0c0c, $alpha: .5);
+            outline: 0;
+            border:2px solid $blue-font-clr; border-width: 0 0 2px 0;
+            color: $lightGrey-font-clr;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding:.5em 1em;
+            transition: .3s; 
+            width:100%;  
+
+            &:focus{
+               background:rgba($color: #000, $alpha: 1);
+            }
+         }
+
+         button{
+            padding:1em 0;
+            text-align: center;
+            background: none;
+            margin:0 2em;
+            border-radius: .3em;
+            outline: 0;
+         }
+
+         &.formBtns{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+   
+            button{
+               width:40%;
+               margin:0 auto;
+               display: block;
+               cursor: pointer;
+               transition: .3s;
+      
+               span{
+                  transition: .3s;
+               }
+      
+               &:hover{
+                  background: rgba(0,0,0,.4) !important;
+               }
+   
+               &.green{
+                  color:rgb(32, 151, 32);
+                  border:3px solid rgb(32, 151, 32);
+               }
+
+               &.red{
+                  color: $mark-font-clr;
+                  border:3px solid $mark-font-clr;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .editSec{
+      form{
+         width: 100%;
+
+         label{
+            span{
+               font-size: clamp(.7rem,3vw,1rem);
+            }
+         }
+      }
+   }
+}

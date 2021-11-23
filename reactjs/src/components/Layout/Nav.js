@@ -18,6 +18,7 @@ const Nav = () => {
             <li> <Link to='/catalog'> Catalog </Link> </li>
             <li> <Link to='/cart'> Cart </Link> </li>
             <li> <Link to='/add-new' className='addLink' > Add </Link> </li>
+            <li> <Link to='/mod-prod' className='addLink' > Mod </Link> </li>
          </ul>
       </nav>
    )
